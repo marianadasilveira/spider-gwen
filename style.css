@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+/*font-family: "Open Sans", sans-serif;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+:root {
+  --text-color: #000;
+  --text-color2: #fff;
+
+  --main-color: #4bd8e9;
+  --main-color-light: #a5ecf4;
+
+  --second-main-color: #bb3a70;
+  --second-main-color-light: #de18b2;
+
+  --h1-font: 7vmin;
+  --h1-font-bold: 9vmin;
+  --h2-font: 4vmin;
+  --p-font: 3vmin;
+}
+
+/*-----------------------------------------------------------------*/
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*HEADER*/
+header {
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  transition: all 0.5s ease;
+  z-index: 2;
+  top: 0;
+  background-color: #fff;
+  background-image: url(./images/Design_sem_nome-removebg-preview.png);
+  -webkit-box-shadow: inset 0px -4px 17px -4px rgba(187, 58, 112, 0.47);
+  box-shadow: inset 0px -4px 17px -4px rgba(187, 58, 112, 0.47);
+}
+
+/*LOGO - inicio*/
+.logotipo {
+  width: 45%;
+  height: 100%;
+  margin: 0 25px;
+  padding: 0;
+  position: absolute;
+}
+
+.logo img {
+  height: 100%;
+}
+
+/*MENU - inicio*/
+.menu {
+  width: 100%;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.nav-item a {
+  color: var(--second-main-color);
+  position: relative;
+  margin: 12px;
+  padding-top: 20%;
+  padding-bottom: 3px;
+  transition: all 0.8s;
+}
+
+.nav-item a.active::before {
+  width: 100%;
+}
+
+.nav-item a::marker {
+  color: var(--second--main-color);
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--second-main-color);
+  transition: width 0.8s;
+}
+
+.nav-item a:hover::before,
+.nav-item a.active:hover::before {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  height: 6rem;
+  bottom: 0;
+  padding: 10px 5px;
+  background: url(./images/Design_sem_nome-removebg-preview.png);
+  -webkit-box-shadow: 0px -4px 17px -4px rgba(187, 58, 112, 0.47);
+  box-shadow: 0px -4px 17px -4px rgba(187, 58, 112, 0.47);
+}
+
+#footer-sobre {
+  margin: 60% 2% 0% 0%;
+}
+
+.p-4 {
+  color: var(--second-main-color);
+}
+
+.up {
+  cursor: pointer;
+  transition: 1s;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+.up img {
+  width: 40px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*SLIDE*/
+.slide {
+  width: 100%;
+  overflow: hidden;
+  height: 800px;
+}
+
+.slide img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*OUTROS*/
+.espaco-branco {
+  height: 9%;
+}
+
+.display-4 {
+  color: var(--second-main-color);
+}
+
+
+/*-----------------------------------------------------------------*/
+/*CARDS*/
+.cards {
+  width: 100%;
+  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-grupo {
+  width: 100%;
+  max-width: 2700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+
+/*-----------------------------------------------------------------*/
+
+/*SOBRE*/
+.content-text {
+  width: 100%;
+  margin-bottom: 500px;
+}
+
+.introducao {
+  width: 100%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.introducao-content {
+  margin: 0% 29%;
+}
+
+.space-lead {
+  padding-bottom: 5%;
+}
+
+.conteudo {
+  width: 80%;
+  justify-content: space-around;
+}
+
+.imagem {
+  float: left;
+}
+
+.imagem2 {
+  float: right;
+}
+
+.historia {
+  float: right;
+  width: 70%;
+}
+
+.historia2 {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.historia3 {
+  float: left;
+  width: 70%;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*GALERIA*/
+.galeria {
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1799px;
+}
+
+.foto-galeria {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.foto-galeria:hover {
+  transform: scale(1.2);
+  /*foco na imagem*/
+  position: relative;
+  transition: 300ms linear;
+  /*duração da transição e função do tempo*/
+}
+
+.position-right {
+  object-position: -250px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*CONTATO*/
+#container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.contato {
+  width: 100%;
+  position: relative;
+}
+
+.image-background {
+  padding-left: 1000px;
+  position: absolute;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-background img {
+  width: 800px;
+}
+
+/*fim "content"*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*inicio FORMULÁRIO*/
+.contato-form {
+  width: 32%;
+  position: relative;
+  border-radius: 35px;
+  box-shadow: 0 0 50px #bb3a70;
+  background: linear-gradient(to top left, #4bd8e9 0%, #f170a6 100%);
+  color: var(--text-color2);
+  padding: 3%;
+  /*margem dos inputs*/
+  margin: 10% 12%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  /*tamanho do espaço do texto*/
+  margin: 8px 0;
+  /*distância entre os itens*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=submit], input[type=reset] {
+  width: 49.5%;
+  background-color: var(--second-main-color);
+  color: var(--text-color2);
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+  background-color: var(--main-color);
+  color: var(--text-color2);
+}
+
+textarea {
+  width: 100%;
+  min-height: 40%;
+  padding: 12px 20px;
+  /*tamanho do espaço do texto*/
+  margin: 8px 0;
+  /*distância entre os itens*/
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*RESPONSIVIDADE*/
+@media screen and (min-width:300px) and (max-width:767px) {
+
+  /*responsividade pro iphone 12 pro max*/
+  .logotipo {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  .nav-item a {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  header {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+  }
+
+  .nav {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .carousel {
+    top: 3vh;
+  }
+
+  .slide {
+    width: 100%;
+    overflow: hidden;
+    height: 350px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .card-grupo {
+    display: block;
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5%;
+  }
+
+  .introducao {
+    margin-top: 40%;
+    text-align: justify;
+  }
+
+  .introducao-content {
+    margin: 0% 9%;
+    padding-bottom: 50px;
+  }
+
+  .conteudo {
+    width: 100%;
+    margin: 0% 9%;
+  }
+
+  .historia {
+    width: 100%;
+    margin: 0% 9%;
+    float: none;
+    text-align: justify;
+  }
+
+  .historia2 {
+    width: 100%;
+    margin: 0% 9%;
+    float: none;
+    text-align: justify;
+  }
+
+  .historia3 {
+    width: 100%;
+    margin: 0% 9%;
+    float: none;
+    text-align: justify;
+  }
+
+  .imagem {
+    float: none;
+    margin-left: 15%;
+  }
+
+  .imagem2 {
+    float: none;
+    margin-left: 15%;
+  }
+
+  .lead {
+    margin: 0% 9%;
+  }
+
+  .space-lead {
+    padding-bottom: 0%;
+  }
+
+  .foto-galeria {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+
+
+  #footer-sobre {
+    margin: 5050px 0 0;
+  }
+
+  .contato-form {
+    width: 95%;
+    margin: 40% auto 0% auto;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  input[type=submit], input[type=reset] {
+    width: 49%;
+  }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1800px) {
+  .conteudo {
+    width: 100%;
+    padding: 2% 5%;
+  }
+
+  .lead {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .lead-special {
+    width: 100%;
+  }
+
+
+  .imagem2 {
+    float: right;
+  }
+
+  .historia2 {
+    width: 100%;
+  }
+
+  .historia3 {
+    width: 75%;
+  }
+
+  #footer-sobre {
+    margin: 1430px 0 0 0;
+  }
+
+
+  .contato-form {
+    width: 40%;
+
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  input[type=submit], input[type=reset] {
+    width: 49.5%;
+  }
+
+  /*
+
+
+*/
+}
