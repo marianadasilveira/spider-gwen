@@ -205,6 +205,10 @@ footer {
   justify-content: space-around;
 }
 
+.card-body{
+  height: 250px;
+}
+
 .card {
   position: relative;
   margin-bottom: 75px;
